@@ -25,7 +25,7 @@ class MpvMonitor:
             lines = open(config_path).readlines()
             for line in lines:
                 stripped_line = line.strip()
-                if stripped_line.startswith('input-ipc-server='):
+                if stripped_line.startswith('--input-ipc-server='):
                     mpv_ipc_path = stripped_line[stripped_line.index('=') + 1:]
                     break
             if mpv_ipc_path == 'auto-detect':
